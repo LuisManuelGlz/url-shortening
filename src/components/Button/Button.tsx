@@ -1,5 +1,6 @@
 import { ReactNode, HTMLAttributes } from 'react';
-import './Button.styles.css';
+
+import styles from './Button.module.css';
 
 type Props = {
   children?: ReactNode;
@@ -7,8 +8,18 @@ type Props = {
 } & HTMLAttributes<HTMLButtonElement>;
 
 const Button = ({ children, type = 'pill', ...rest }: Props) => {
+  let buttonClassName = `${styles.button} `;
+
+  if (type === 'pill') {
+    buttonClassName += styles.pill;
+  } else if (type === 'square') {
+    buttonClassName += styles.square;
+  } else if (type === 'simple') {
+    buttonClassName += styles.simple;
+  }
+
   return (
-    <button className={`button ${type}`} {...rest}>
+    <button className={buttonClassName} {...rest}>
       {children}
     </button>
   );

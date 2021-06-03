@@ -1,45 +1,45 @@
-nav {
+.nav {
   /* position: fixed; */
   /* z-index: 1000; */
   padding: 10px 0;
   width: 100%;
 }
 
-.nav-container {
+.navContainer {
   display: flex;
   align-items: center;
 }
 
-.nav-brand {
+.navBrand {
   font-size: 30px;
   font-weight: bold;
   color: var(--very-dark-blue);
 }
 
-.nav-items-container {
+.navItemsContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.nav-list {
+.navList {
   display: flex;
   list-style: none;
   gap: 20px;
 }
 
-.nav-link {
+.navLink {
   color: var(--grayish-violet);
   font-weight: bold;
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.navLink:hover,
+.navLink:focus {
   color: var(--very-dark-blue);
 }
 
-.nav-buttons {
+.navButtons {
   display: flex;
   gap: 20px;
 }

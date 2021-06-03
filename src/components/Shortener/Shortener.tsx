@@ -1,5 +1,5 @@
 import Container from '../Container';
-import './Shortener.styles.css';
+import styles from './Shortener.module.css';
 
 const Shortener = () => {
   return (

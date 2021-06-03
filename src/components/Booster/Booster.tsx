@@ -1,5 +1,5 @@
 import Container from '../Container';
-import './Booster.styles.css';
+import styles from './Booster.module.css';
 
 const Booster = () => {
   return (
