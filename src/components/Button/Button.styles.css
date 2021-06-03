@@ -1,0 +1,29 @@
+.button {
+  border: none;
+  padding: 10px 20px;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  background: var(--cyan);
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  opacity: 0.5;
+}
+
+.pill {
+  border-radius: 25px;
+}
+
+.square {
+  border-radius: 10px;
+}
+
+.simple {
+  background: transparent;
+  color: var(--grayish-violet);
+}

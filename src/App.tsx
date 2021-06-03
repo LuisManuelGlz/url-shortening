@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import Layout from './components/Layout';
+import Container from './components/Container';
+import Shortener from './components/Shortener';
+import Booster from './components/Booster';
+
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Layout>
+        {/* Showcase */}
+        <section>
+          <Container>
+            <h1>hola</h1>
+          </Container>
+        </section>
+
+        {/* Shorter */}
+        <Shortener />
+
+        {/* Booster */}
+        <Booster />
+      </Layout>
     </div>
   );
-}
+};
 
 export default App;

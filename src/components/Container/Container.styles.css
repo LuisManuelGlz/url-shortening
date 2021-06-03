@@ -1,0 +1,15 @@
+.container {
+  margin: 0 9.1em;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    margin: 0 5em;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    margin: 0 1.4em;
+  }
+}
