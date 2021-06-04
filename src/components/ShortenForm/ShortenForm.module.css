@@ -1,0 +1,32 @@
+.shortenerForm {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  padding: 40px 60px;
+  overflow: hidden;
+  border-radius: 10px;
+
+  background: var(--dark-violet);
+  transform: translateY(-50%);
+}
+
+.formInput {
+  flex-grow: 2;
+  padding: 0 20px;
+  border: none;
+  border-radius: 10px;
+
+  font-size: 25px;
+}
+
+.formButton {
+}
+
+.formImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+}

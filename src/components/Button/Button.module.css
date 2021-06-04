@@ -12,7 +12,8 @@
 
 .button:hover,
 .button:focus {
-  opacity: 0.5;
+  filter: brightness(110%)
+  /* opacity: 0.5; */
 }
 
 .pill {

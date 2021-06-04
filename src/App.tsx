@@ -1,6 +1,6 @@
 import Layout from './components/Layout';
 import Container from './components/Container';
-import Shortener from './components/Shortener';
+import Shorten from './components/Shorten';
 import Button from './components/Button';
 import styles from './App.module.css';
 
@@ -31,8 +31,8 @@ const App = () => {
           </Container>
         </section>
 
-        {/* Shorter */}
-        <Shortener />
+        {/* Shorten */}
+        <Shorten />
       </Layout>
     </div>
   );
