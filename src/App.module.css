@@ -1,0 +1,23 @@
+.showcase {
+  padding: 90px 0;
+}
+
+.showcaseIntro {
+  font-size: 70px;
+  color: var(--very-dark-blue);
+}
+
+.showcaseDescription {
+  width: 50%;
+  font-size: 20px;
+  color: var(--grayish-violet);
+}
+
+.showcaseImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 800;
+  width: 50%;
+  transform: translate(10%, 30%);
+}

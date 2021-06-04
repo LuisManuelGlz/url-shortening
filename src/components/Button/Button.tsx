@@ -5,18 +5,19 @@ import styles from './Button.module.css';
 type Props = {
   children?: ReactNode;
   type?: 'pill' | 'square' | 'simple';
+  large?: boolean;
 } & HTMLAttributes<HTMLButtonElement>;
 
-const Button = ({ children, type = 'pill', ...rest }: Props) => {
-  let buttonClassName = `${styles.button} `;
-
-  if (type === 'pill') {
-    buttonClassName += styles.pill;
-  } else if (type === 'square') {
-    buttonClassName += styles.square;
-  } else if (type === 'simple') {
-    buttonClassName += styles.simple;
-  }
+const Button = ({
+  children,
+  type = 'pill',
+  className,
+  large,
+  ...rest
+}: Props) => {
+  let buttonClassName = `${styles.button} ${styles[type]} ${
+    large && styles.large
+  }`;
 
   return (
     <button className={buttonClassName} {...rest}>

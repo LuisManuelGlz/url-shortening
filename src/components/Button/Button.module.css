@@ -16,7 +16,7 @@
 }
 
 .pill {
-  border-radius: 25px;
+  border-radius: 50px;
 }
 
 .square {
@@ -26,4 +26,9 @@
 .simple {
   background: transparent;
   color: var(--grayish-violet);
+}
+
+.large {
+  padding: 15px 40px;
+  font-size: 20px;
 }
