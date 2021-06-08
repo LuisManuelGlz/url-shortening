@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from '../Button';
 import styles from './ShortenForm.module.css';
 
@@ -15,7 +14,7 @@ const ShortenForm = () => {
         className={styles.formInput}
         placeholder="Shorten a link here..."
       />
-      <Button type="square" large className={styles.formButton}>
+      <Button type="square" large>
         Shorten it!
       </Button>
     </form>
