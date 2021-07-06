@@ -33,6 +33,19 @@ const App = () => {
 
         {/* Shorten */}
         <Shorten />
+
+        {/* Boost */}
+        <div className={styles.boost}>
+          <img
+            className={styles.boostImage}
+            src="./images/bg-boost-desktop.svg"
+            alt="bg boost"
+          />
+          <Container>
+            <h4 className={styles.boostText}>Boost your links today</h4>
+            <Button large>Get Started</Button>
+          </Container>
+        </div>
       </Layout>
     </div>
   );
