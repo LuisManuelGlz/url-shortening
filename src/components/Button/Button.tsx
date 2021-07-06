@@ -11,7 +11,6 @@ type Props = {
 const Button = ({
   children,
   type = 'pill',
-  className,
   large,
   ...rest
 }: Props) => {

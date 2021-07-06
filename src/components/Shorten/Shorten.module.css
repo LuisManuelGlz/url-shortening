@@ -10,5 +10,31 @@
 }
 
 .shortenerHeaderDescription {
-  color: var(--very-dark-blue);
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  color: var(--grayish-violet);
+}
+
+.benefitsContainer {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.secondBenefitCard {
+  transform: translateY(15%);
+}
+
+.thirdBenefitCard {
+  transform: translateY(30%);
+}
+
+.horizontalLine {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 7px;
+  background: var(--cyan);
 }

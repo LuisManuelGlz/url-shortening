@@ -1,6 +1,8 @@
 import Container from '../Container';
 import ShortenForm from '../ShortenForm';
+import BenefitImage from '../BenefitImage';
 import styles from './Shorten.module.css';
+import BenefitCard from '../BenefitCard';
 
 const Shorten = () => {
   return (
@@ -14,9 +16,10 @@ const Shorten = () => {
           statistics dashboard.
         </p>
 
-        <div>
-          <div>
-            <img
+        <div className={styles.benefitsContainer}>
+          <div className={styles.horizontalLine} />
+          <BenefitCard>
+            <BenefitImage
               src="./images/icon-brand-recognition.svg"
               alt="Brand Recognition"
             />
@@ -26,9 +29,10 @@ const Shorten = () => {
               mean a thing. Branded links help instil confidence in your
               content.
             </p>
-          </div>
-          <div>
-            <img
+          </BenefitCard>
+
+          <BenefitCard className={styles.secondBenefitCard}>
+            <BenefitImage
               src="./images/icon-detailed-records.svg"
               alt="Detailed Records"
             />
@@ -39,9 +43,10 @@ const Shorten = () => {
               where people engage with your content helps inform better
               decisions.
             </p>
-          </div>
-          <div>
-            <img
+          </BenefitCard>
+
+          <BenefitCard className={styles.thirdBenefitCard}>
+            <BenefitImage
               src="./images/icon-fully-customizable.svg"
               alt="Fully Customizable"
             />
@@ -50,7 +55,7 @@ const Shorten = () => {
               Improve brand awareness and content discoverability through
               customizable links, supercharging audience engagement.
             </p>
-          </div>
+          </BenefitCard>
         </div>
       </Container>
     </section>
