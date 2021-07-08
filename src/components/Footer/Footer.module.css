@@ -1,0 +1,44 @@
+.container {
+  padding: 50px 0;
+  font-size: 15px;
+  color: #fff;
+  background: var(--very-dark-violet);
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerDivider {
+  
+}
+
+.footerList {
+  display: flex;
+}
+
+.footerLink {
+  display: block;
+  color: var(--grayish-violet);
+}
+
+.footerLink:hover,
+.footerLink:focus {
+  color: var(--cyan);
+}
+
+.footerSocialLink {
+  margin-left: 10px;
+}
+
+.footerSocialLink:hover,
+.footerSocialLink:focus {
+  filter: invert(57%) sepia(93%) saturate(362%) hue-rotate(132deg)
+    brightness(160%) contrast(87%);
+}
+
+.brand {
+  font-size: 30px;
+  font-weight: bold;
+}

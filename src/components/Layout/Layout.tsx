@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Navigation from '../Navigation';
+import Footer from '../Footer';
 
 type Props = {
   children?: ReactNode;
@@ -10,7 +11,7 @@ const Layout = ({ children }: Props) => {
     <>
       <Navigation />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
