@@ -12,11 +12,12 @@ const Button = ({
   children,
   type = 'pill',
   large,
+  className,
   ...rest
 }: Props) => {
   let buttonClassName = `${styles.button} ${styles[type]} ${
     large && styles.large
-  }`;
+  } ${className}`;
 
   return (
     <button className={buttonClassName} {...rest}>

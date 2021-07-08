@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-radius: 7px;
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+.originalLink {
+  color: var(--very-dark-blue);
+}
+
+.shortenedLink {
+  color: var(--cyan);
+  margin-right: 15px;
+}
+
+.shortenedLinkCopied {
+  background: var(--dark-violet);
+}
