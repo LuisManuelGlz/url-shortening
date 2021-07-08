@@ -32,6 +32,10 @@
   color: var(--red);
 }
 
+.formInputErrorMessageHidden {
+  visibility: hidden;
+}
+
 .formImage {
   position: absolute;
   top: 0;

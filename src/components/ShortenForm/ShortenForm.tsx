@@ -46,7 +46,11 @@ const ShortenForm = () => {
             value={inputValue}
             required
           />
-          <span className={styles.formInputErrorMessage}>
+          <span
+            className={`${styles.formInputErrorMessage} ${
+              isInputValid && styles.formInputErrorMessageHidden
+            }`}
+          >
             Please add a link
           </span>
         </div>
