@@ -1,7 +1,7 @@
 import { useState, useEffect, FormEvent, ChangeEvent } from 'react';
 import Button from '../Button';
 import ShortenedLink from '../ShortenedLink';
-import config from '../../config';
+import { bitly as bitlyConfig } from '../../config';
 import styles from './ShortenForm.module.css';
 
 const ShortenForm = () => {
@@ -18,11 +18,11 @@ const ShortenForm = () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${config.bitlyAccessToken}`,
+        Authorization: `Bearer ${bitlyConfig.accessToken}`,
       },
       body: JSON.stringify({
-        group_guid: config.bitlyGroupGuid,
-        domain: config.bitlyDomain,
+        group_guid: bitlyConfig.groupGuid,
+        domain: bitlyConfig.domain,
         long_url: inputValue,
       }),
     })
@@ -41,6 +41,11 @@ const ShortenForm = () => {
             shortenedLinkInfo,
             ...oldShortenedLinks,
           ]);
+
+          localStorage.setItem(
+            'shortenedLinks',
+            JSON.stringify([shortenedLinkInfo, ...shortenedLinks])
+          );
         }
       });
   };
@@ -57,6 +62,13 @@ const ShortenForm = () => {
       setIsInputValid(true);
     }
   };
+
+  useEffect(() => {
+    const shortenedLinksString = localStorage.getItem('shortenedLinks');
+    if (shortenedLinksString) {
+      setShortenedLinks(JSON.parse(shortenedLinksString));
+    }
+  }, []);
 
   return (
     <>
