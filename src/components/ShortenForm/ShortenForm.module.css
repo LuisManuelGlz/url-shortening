@@ -1,13 +1,13 @@
 .shortenerForm {
   position: relative;
   display: flex;
-  gap: 10px;
-  padding: 40px 60px;
+  gap: 25px;
+  padding: 52px 65px;
   overflow: hidden;
   border-radius: 10px;
 
   background: var(--dark-violet);
-  transform: translateY(-50%);
+  transform: translateY(-67%);
 }
 
 .formInputContainer {
@@ -17,11 +17,11 @@
 .formInput {
   width: 100%;
   height: 100%;
-  padding: 0 20px;
+  padding: 8px 30px 0 30px;
   border: 3px solid white;
   border-radius: 10px;
 
-  font-size: 25px;
+  font-size: 21px;
 }
 
 .formInputInvalid {

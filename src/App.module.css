@@ -1,15 +1,20 @@
 .showcase {
-  padding: 150px 0;
+  padding: 150px 0 225px 0;
 }
 
 .showcaseIntro {
-  font-size: 70px;
+  margin-top: 85px;
+  font-size: 79px;
+  letter-spacing: -1.5px;
+  line-height: 90px;
   color: var(--very-dark-blue);
 }
 
 .showcaseDescription {
+  margin-top: -65px;
+  margin-bottom: 38px;
   width: 50%;
-  font-size: 20px;
+  font-size: 22px;
   color: var(--grayish-violet);
 }
 
@@ -17,10 +22,10 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 800;
-  width: 50%;
+  z-index: -200;
+  width: 51%;
 
-  transform: translate(10%, 30%);
+  transform: translate(17%, 34%);
 }
 
 .boost {
