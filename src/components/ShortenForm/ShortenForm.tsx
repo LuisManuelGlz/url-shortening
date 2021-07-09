@@ -1,14 +1,15 @@
 import { useState, useEffect, FormEvent, ChangeEvent } from 'react';
-import { shortenLink } from '../../api/bitlyAPI';
 import Button from '../Button';
 import ShortenedLink from '../ShortenedLink';
 import styles from './ShortenForm.module.css';
+import { shortenLink } from '../../api/bitlyAPI';
+import { ShortenedLinkType } from '../../types/shortenedLink';
 
 const ShortenForm = () => {
-  const [inputValue, setInputValue] = useState('');
-  const [isInputTouched, setIsInputTouched] = useState(false);
-  const [isInputValid, setIsInputValid] = useState(true);
-  const [shortenedLinks, setShortenedLinks] = useState<any[]>([]);
+  const [inputValue, setInputValue] = useState<string>('');
+  const [isInputTouched, setIsInputTouched] = useState<boolean>(false);
+  const [isInputValid, setIsInputValid] = useState<boolean>(true);
+  const [shortenedLinks, setShortenedLinks] = useState<ShortenedLinkType[]>([]);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -26,7 +27,7 @@ const ShortenForm = () => {
             shortenedLink: link,
           };
 
-          setShortenedLinks((oldShortenedLinks: any) => [
+          setShortenedLinks((oldShortenedLinks) => [
             shortenedLinkInfo,
             ...oldShortenedLinks,
           ]);
