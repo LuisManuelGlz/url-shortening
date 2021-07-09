@@ -1,17 +1,48 @@
-import { useState, FormEvent, ChangeEvent } from 'react';
+import { useState, useEffect, FormEvent, ChangeEvent } from 'react';
 import Button from '../Button';
 import ShortenedLink from '../ShortenedLink';
+import config from '../../config';
 import styles from './ShortenForm.module.css';
 
 const ShortenForm = () => {
   const [inputValue, setInputValue] = useState('');
   const [isInputTouched, setIsInputTouched] = useState(false);
   const [isInputValid, setIsInputValid] = useState(true);
+  const [shortenedLinks, setShortenedLinks] = useState<any[]>([]);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsInputValid(true);
 
-    console.log(inputValue);
+    fetch('https://api-ssl.bitly.com/v4/shorten', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${config.bitlyAccessToken}`,
+      },
+      body: JSON.stringify({
+        group_guid: config.bitlyGroupGuid,
+        domain: config.bitlyDomain,
+        long_url: inputValue,
+      }),
+    })
+      .then((response) => response.json())
+      .then(({ link, errors }) => {
+        if (errors) {
+          setIsInputValid(false);
+        } else {
+          setInputValue('');
+          const shortenedLinkInfo = {
+            originalLink: inputValue,
+            shortenedLink: link,
+          };
+
+          setShortenedLinks((oldShortenedLinks: any) => [
+            shortenedLinkInfo,
+            ...oldShortenedLinks,
+          ]);
+        }
+      });
   };
 
   const handleInputChange = ({
@@ -58,10 +89,13 @@ const ShortenForm = () => {
           Shorten it!
         </Button>
       </form>
-      <ShortenedLink
-        originalLink="www.example.com"
-        shortenedLink="www.example.com"
-      />
+      {shortenedLinks.map(({ originalLink, shortenedLink }, index) => (
+        <ShortenedLink
+          key={index}
+          originalLink={originalLink}
+          shortenedLink={shortenedLink}
+        />
+      ))}
     </>
   );
 };
