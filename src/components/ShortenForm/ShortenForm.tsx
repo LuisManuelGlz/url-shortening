@@ -1,7 +1,7 @@
 import { useState, useEffect, FormEvent, ChangeEvent } from 'react';
+import { shortenLink } from '../../api/bitlyAPI';
 import Button from '../Button';
 import ShortenedLink from '../ShortenedLink';
-import { bitly as bitlyConfig } from '../../config';
 import styles from './ShortenForm.module.css';
 
 const ShortenForm = () => {
@@ -14,18 +14,7 @@ const ShortenForm = () => {
     e.preventDefault();
     setIsInputValid(true);
 
-    fetch('https://api-ssl.bitly.com/v4/shorten', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${bitlyConfig.accessToken}`,
-      },
-      body: JSON.stringify({
-        group_guid: bitlyConfig.groupGuid,
-        domain: bitlyConfig.domain,
-        long_url: inputValue,
-      }),
-    })
+    shortenLink(inputValue)
       .then((response) => response.json())
       .then(({ link, errors }) => {
         if (errors) {
