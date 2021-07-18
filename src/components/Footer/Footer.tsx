@@ -12,10 +12,10 @@ const Footer = () => {
             </a>
           </div>
 
-          <div />
+          <div className={styles.footerDivider} />
 
           <div>
-            <h5>Features</h5>
+            <h5 className={styles.footerListTitle}>Features</h5>
             <a className={styles.footerLink} href="/#">
               Link Shortening
             </a>
@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h5>Resources</h5>
+            <h5 className={styles.footerListTitle}>Resources</h5>
             <a className={styles.footerLink} href="/#">
               Blog
             </a>
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h5>Company</h5>
+            <h5 className={styles.footerListTitle}>Company</h5>
             <a className={styles.footerLink} href="/#">
               About
             </a>
