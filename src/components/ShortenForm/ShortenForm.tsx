@@ -84,7 +84,7 @@ const ShortenForm = () => {
               isInputValid && styles.formInputErrorMessageHidden
             }`}
           >
-            Please add a link
+            <em>Please add a link</em>
           </span>
         </div>
         <Button type="square" large>
