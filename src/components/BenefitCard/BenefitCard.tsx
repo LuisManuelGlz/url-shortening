@@ -10,7 +10,7 @@ const BenefitCard = ({ children, className, ...rest }: Props) => {
 
   return (
     <div className={benefitCardClassName} {...rest}>
-      <div className={styles.content}>{children}</div>
+      <div>{children}</div>
     </div>
   );
 };

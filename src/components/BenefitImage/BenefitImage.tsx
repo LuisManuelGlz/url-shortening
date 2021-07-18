@@ -8,7 +8,7 @@ type Props = {
 const BenefitImage = ({ src, alt }: Props) => {
   return (
     <div className={styles.container}>
-      <img className={styles.image} src={src} alt={alt} width="30" />
+      <img className={styles.image} src={src} alt={alt} width="40" />
     </div>
   );
 };

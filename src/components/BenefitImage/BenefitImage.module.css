@@ -1,9 +1,12 @@
 .container {
-  position: relative;
-  width: 70px;
-  height: 70px;
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: 0;
+  top: 0;
   border-radius: 50px;
   background: var(--dark-violet);
+  transform: translate(35%, -50%);
 }
 
 .image {
