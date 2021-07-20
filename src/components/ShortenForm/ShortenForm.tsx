@@ -68,6 +68,11 @@ const ShortenForm = () => {
           src="./images/bg-shorten-desktop.svg"
           alt="bg shorten"
         />
+        <img
+          className={styles.formImageMobile}
+          src="./images/bg-shorten-mobile.svg"
+          alt="bg shorten"
+        />
         <div className={styles.formInputContainer}>
           <input
             type="url"

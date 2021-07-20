@@ -46,7 +46,7 @@ const App = () => {
           </p>
 
           <div className={styles.benefitsContainer}>
-            <div className={styles.horizontalLine} />
+            <div className={styles.line} />
             <BenefitCard>
               <BenefitImage
                 src="./images/icon-brand-recognition.svg"

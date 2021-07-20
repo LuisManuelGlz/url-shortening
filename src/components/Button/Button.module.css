@@ -12,7 +12,7 @@
 
 .button:hover,
 .button:focus {
-  filter: brightness(110%)
+  filter: brightness(110%);
 }
 
 .pill {
@@ -32,4 +32,11 @@
 .large {
   padding: 16px 42px;
   font-size: 21px;
+}
+
+@media only screen and (max-width: 992px) {
+  .square {
+    padding: 12px 24px;
+    border-radius: 5px;
+  }
 }
