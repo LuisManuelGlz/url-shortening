@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
-import Container from "../Container";
-import styles from "./Boost.module.css";
+import { ReactNode } from 'react';
+import Container from '../Container';
+import styles from './Boost.module.css';
 
 type Props = {
   children: ReactNode;
@@ -12,6 +12,11 @@ const Boost = ({ children }: Props) => {
       <img
         className={styles.boostImage}
         src="./images/bg-boost-desktop.svg"
+        alt="bg boost"
+      />
+      <img
+        className={styles.boostImageMobile}
+        src="./images/bg-boost-mobile.svg"
         alt="bg boost"
       />
       <Container>{children}</Container>

@@ -16,3 +16,28 @@
   width: 100%;
   height: 100%;
 }
+
+.boostImageMobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    align-items: center;
+    padding: 89px 0;
+  }
+
+  .boostImage {
+    display: none;
+  }
+
+  .boostImageMobile {
+    display: block;
+  }
+}
