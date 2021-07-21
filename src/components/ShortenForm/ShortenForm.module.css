@@ -78,6 +78,10 @@
     margin-bottom: -10px;
   }
 
+  .formInputErrorMessage {
+    font-size: 12px;
+  }
+
   .formImage {
     display: none;
   }

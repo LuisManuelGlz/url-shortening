@@ -31,7 +31,8 @@ const ShortenedLink = ({ originalLink, shortenedLink }: Props) => {
       >
         {originalLink}
       </a>
-      <div>
+      <div className={styles.divider} />
+      <div className={styles.shortenedLinkContainer}>
         <a
           id="link-to-copy"
           className={styles.shortenedLink}
@@ -43,9 +44,9 @@ const ShortenedLink = ({ originalLink, shortenedLink }: Props) => {
         </a>
         <Button
           type="square"
-          className={
+          className={`${
             shortenedLinkCopied ? styles.shortenedLinkCopied : undefined
-          }
+          } ${styles.shortenedLinkButton}`}
           onClick={copyShortenedLink}
         >
           {shortenedLinkCopied ? 'Copied!' : 'Copy'}

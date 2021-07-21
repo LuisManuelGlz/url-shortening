@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,6 +16,11 @@
 }
 
 .originalLink {
+  width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   color: var(--very-dark-blue);
 }
 
@@ -25,4 +31,45 @@
 
 .shortenedLinkCopied {
   background: var(--dark-violet);
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    padding: 15px;
+    gap: 22px;
+    transform: translateY(-57%);
+  }
+
+  .divider {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--gray);
+  }
+
+  .originalLink,
+  .shortenedLink {
+    font-size: 16px;
+  }
+
+  .originalLink {
+    width: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .shortenedLinkContainer {
+    width: 100%;
+  }
+
+  .shortenedLinkButton {
+    margin-top: 12px;
+    width: 100%;
+  }
 }
