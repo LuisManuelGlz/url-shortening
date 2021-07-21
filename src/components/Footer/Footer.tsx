@@ -74,6 +74,25 @@ const Footer = () => {
             </a>
           </div>
         </div>
+        <div className={styles.attribution}>
+          Challenge by{' '}
+          <a
+            href="/#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Frontend Mentor
+          </a>
+          . Coded by{' '}
+          <a
+            href="https://github.com/LuisManuelGlz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Luis Manuel González
+          </a>
+          .
+        </div>
       </Container>
     </footer>
   );
