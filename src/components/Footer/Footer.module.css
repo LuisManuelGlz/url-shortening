@@ -46,3 +46,20 @@
   filter: invert(57%) sepia(93%) saturate(362%) hue-rotate(132deg)
     brightness(160%) contrast(87%);
 }
+
+@media only screen and (max-width: 992px) {
+  .container {
+    padding: 45px 20px;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+    text-align: center;
+    gap: 17px;
+  }
+
+  .footerSocialList {
+    margin-top: 20px;
+    margin-left: -30px;
+  }
+}

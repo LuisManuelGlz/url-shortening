@@ -56,7 +56,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <div>
+          <div className={styles.footerSocialList}>
             <a className={styles.footerSocialLink} href="/#">
               <img src="./images/icon-facebook.svg" alt="Icon facebook" />
             </a>
