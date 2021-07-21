@@ -84,6 +84,7 @@
   .showcaseImage {
     position: relative;
     width: 153%;
+    max-width: 700px;
     transform: translate(0);
   }
 
