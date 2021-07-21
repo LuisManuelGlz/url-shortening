@@ -77,7 +77,7 @@ const Footer = () => {
         <div className={styles.attribution}>
           Challenge by{' '}
           <a
-            href="/#"
+            href="https://www.frontendmentor.io/solutions/url-shortening-api-landing-page-react-and-typescript-Hg17fAVCI"
             target="_blank"
             rel="noopener noreferrer"
           >
